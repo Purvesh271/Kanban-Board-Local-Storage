@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <nav>
+            <div class="left">Kanban</div>
+            <div class="right"><button id="toggleModal">Add new Task</button></div>
+        </nav>
+        <section class="board">
+
+            <div id="todo" class="taskCol">
+                <div class="heading">
+                    <div class="bleft">To Do</div>
+                    <div class="bright">0</div>
+                </div>
+                <div draggable="true" class="task">
+                    <h2>Task 1</h2>
+                    <p>This is a description of Task 1.</p>
+                    <button>Delete</button>
+                </div>
+            </div>
+
+            <div id="progress" class="taskCol">
+                <div class="heading">
+                    <div class="bleft">In Progress</div>
+                    <div class="bright">0</div>
+                </div>
+            </div>
+
+            <div id="completed" class="taskCol">
+                <div class="heading">
+                    <div class="bleft">Completed</div>
+                    <div class="bright">0</div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <div class="modal addNewTask">
+        <div class="bg"></div>
+        <div class="back"> X </div>
+        <div class="center">
+            <input type="text" placeholder="Task Title" id="taskTitle"/>
+            <textarea placeholder="Task Description" id="descp"></textarea>
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
